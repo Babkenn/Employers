@@ -1,0 +1,16 @@
+.mat-column-select {
+    overflow: initial;
+}
+
+.details-block {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+
+    div {
+        margin-right: 10px;
+        span {
+            margin: 2px;
+        }
+    }
+}

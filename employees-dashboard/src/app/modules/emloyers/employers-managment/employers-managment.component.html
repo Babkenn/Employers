@@ -1,0 +1,23 @@
+<div class="details-block">
+    <div>
+        <span>Total Emloyers</span>
+        <span>{{(totalItems$ | async) || 0}}</span>
+    </div>
+    <div>
+        <span>Total Clock</span>
+        <span>{{(totalClockTime$ | async) || 0}}</span>
+    </div>
+    <div>
+        <span>Total Paid Ammount</span>
+        <span>{{(totalPaidAmount$ | async) || 0}}</span>
+    </div>
+    <div>
+        <span>Total Paid Overtime</span>
+        <span>{{(totalPaidOvertime$ | async) || 0}}</span>
+    </div>
+</div>
+<app-employers-table
+    [dataSource]="(dataSource$ | async) || []"
+    (pageChange)="onPageChange($event)"
+    [totalItems]="(totalItems$ | async) || 0">
+</app-employers-table>
